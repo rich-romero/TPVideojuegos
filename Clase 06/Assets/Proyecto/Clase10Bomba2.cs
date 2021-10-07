@@ -14,7 +14,7 @@ public class Clase10Bomba2 : MonoBehaviour
     }
 
     void Explode()
-    {
+    {/*
         Collider[] Cols = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider Col in Cols)
         {
@@ -28,7 +28,7 @@ public class Clase10Bomba2 : MonoBehaviour
                 Col.GetComponent<Character>().GetDmg(Dmg);
             }
         }
-        Destroy(gameObject);
+        Destroy(gameObject);*/
     }
 
     // Update is called once per frame

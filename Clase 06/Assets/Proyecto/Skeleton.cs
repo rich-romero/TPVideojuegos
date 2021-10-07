@@ -15,7 +15,7 @@ public class Skeleton : MonoBehaviour, enemy
 
     }
 
-    float dmg()
+    public float dmg()
     {
         return 1;
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface enemy
 {
-    float dmg();
+    public float dmg();
     // Start is called before the first frame update
     
 }
