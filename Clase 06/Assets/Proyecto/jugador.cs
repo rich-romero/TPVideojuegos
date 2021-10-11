@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jugador : MonoBehaviour
+public class jugador : MonoBehaviour, Damageable, Pushable
 
 {
     public float velocidadMov;
@@ -32,7 +32,7 @@ public class jugador : MonoBehaviour
         colBody = body.material.color;
 
     }
-
+      
     // Update is called once per frame
     void Update()
     {
@@ -118,6 +118,23 @@ public class jugador : MonoBehaviour
         {
             cubeIsOnTheGround = true;
         }
+
+    }
+
+    public void takeDmg(int dmg)
+    {
+        if (damageFlag)
+        {
+            damageFlag = false;
+            vida -= dmg;
+            visualQueue();
+        }
+    }
+
+    public void bePushed(float force, Vector3 position)
+    {
+        if(damageFlag)
+        rb.AddForce(Vector3.Normalize(transform.position - position) * force, ForceMode.Impulse);
 
     }
 }
