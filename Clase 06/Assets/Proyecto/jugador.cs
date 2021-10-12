@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jugador : MonoBehaviour, Damageable, Pushable
+public class jugador : character1
 
 {
     public float velocidadMov;
@@ -121,7 +121,7 @@ public class jugador : MonoBehaviour, Damageable, Pushable
 
     }
 
-    public void takeDmg(int dmg)
+    public override void takeDmg2(int dmg)
     {
         if (damageFlag)
         {
@@ -131,7 +131,7 @@ public class jugador : MonoBehaviour, Damageable, Pushable
         }
     }
 
-    public void bePushed(float force, Vector3 position)
+    public override void bePushed2(float force, Vector3 position)
     {
         if(damageFlag)
         rb.AddForce(Vector3.Normalize(transform.position - position) * force, ForceMode.Impulse);

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skeleton : MonoBehaviour, enemy
+public class Skeleton : MonoBehaviour
 {
     public List<Transform> RallyPoints;
     private int Current = 0;

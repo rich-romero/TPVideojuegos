@@ -5,7 +5,6 @@ using UnityEngine;
 public class Slicer : MonoBehaviour
 {
     public float slicerSpeed;
-    public GameObject wall;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +14,7 @@ public class Slicer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(slicerSpeed, 0, 0);
+        transform.Translate(slicerSpeed*Time.deltaTime, 0, 0);
     }
 
     private void OnCollisionEnter(Collision collision)

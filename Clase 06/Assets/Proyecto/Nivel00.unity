@@ -585,8 +585,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128d455170e588d42a76edc3fb65e6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMov: 0.025
-  velocidadRot: 0.75
+  charact: {fileID: 0}
+  velocidadMov: 0.125
+  velocidadRot: 1.75
   vida: 5
   rb: {fileID: 0}
   cubeIsOnTheGround: 0
@@ -1348,6 +1349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db64b59b530528499351a984eed16f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charr: {fileID: 0}
 --- !u!114 &696537524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,6 +1691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db64b59b530528499351a984eed16f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charr: {fileID: 433305034}
 --- !u!1 &820415424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1761,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &912499561
 GameObject:
@@ -1885,6 +1888,7 @@ GameObject:
   - component: {fileID: 1024915009}
   - component: {fileID: 1024915008}
   - component: {fileID: 1024915007}
+  - component: {fileID: 1024915011}
   m_Layer: 7
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -1984,6 +1988,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024915005}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1024915011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024915005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae36c7627a3e4e64a8631c0ac2cc6d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dmg: 1
+  push: 20
 --- !u!1 &1096113727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,6 +2014,7 @@ GameObject:
   - component: {fileID: 1096113731}
   - component: {fileID: 1096113730}
   - component: {fileID: 1096113729}
+  - component: {fileID: 1096113732}
   m_Layer: 7
   m_Name: eHurtbox
   m_TagString: Untagged
@@ -2079,6 +2098,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096113727}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1096113732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096113727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae36c7627a3e4e64a8631c0ac2cc6d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dmg: 1
+  push: 20
 --- !u!1 &1120108853
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,7 +2586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286167405}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2216797, y: 0.58, z: 1.14}
+  m_LocalPosition: {x: -3.2216797, y: 0.74, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1024915006}
@@ -2573,7 +2606,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slicerSpeed: 2
-  wall: {fileID: 0}
 --- !u!54 &1286167408
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3302,7 +3334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889065994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.08, y: 1.24, z: -6.74}
+  m_LocalPosition: {x: -6.83, y: 1.24, z: -6.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class hiboxLink : MonoBehaviour
 {
-    public character1 link;
+    public character1 charr;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,11 @@ public class hiboxLink : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        link.takeDamage(other.transform.position, GetComponent<enemy>().dmg());
+        if (other.GetComponent<Hurtbox>() != null)
+        {
+            charr.bePushed(other.GetComponent<Hurtbox>().push, other.transform.position);
+            charr.takeDmg(other.GetComponent<Hurtbox>().Dmg);
+        }
         Debug.Log("COlisinó");
         //other.transform
     }
