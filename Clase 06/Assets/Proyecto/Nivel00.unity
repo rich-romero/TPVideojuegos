@@ -487,6 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356183847}
   - component: {fileID: 356183849}
+  - component: {fileID: 356183848}
   m_Layer: 0
   m_Name: Shoot
   m_TagString: Untagged
@@ -508,7 +509,7 @@ Transform:
   m_Father: {fileID: 433305036}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &356183849
+--- !u!114 &356183848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,6 +517,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356183846}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd89ba8c2f964984f826e1410e292b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 305965785085738539, guid: efec76a6caabe0143b2c0a20e4c3f012, type: 3}
+  delay: 0
+  frequency: 1
+  slashSonido: {fileID: 3977055901744066008, guid: 1324840aaec60b6438b67d064dd37c1c, type: 3}
+--- !u!114 &356183849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356183846}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 375b9536d046a0d4db0ba9f91be4ee9d, type: 3}
   m_Name: 
