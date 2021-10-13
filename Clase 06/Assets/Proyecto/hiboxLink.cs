@@ -16,6 +16,14 @@ public class hiboxLink : MonoBehaviour
     {
         
     }
+    public void FakeTriggerEnter(int dmg, float force, Vector3 position)
+    {
+        
+        
+            charr.bePushed(force, position);
+            charr.takeDmg(dmg);
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Hurtbox>() != null)

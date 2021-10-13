@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class character1 : MonoBehaviour, Damageable, Pushable
 {
-    public Component charact;
+    
     // Start is called before the first frame update
     void Start()
     {
