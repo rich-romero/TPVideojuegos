@@ -41,14 +41,14 @@ public class jugador : character1
             new Vector3(
                 0,
                 0,
-                Input.GetAxis("Vertical") * velocidadMov
+                Input.GetAxis("Vertical") * velocidadMov*Time.deltaTime
                 )
             );
         ;
         //ROTACION AD
         transform.Rotate(
                 0,
-                Input.GetAxis("Horizontal") * velocidadRot,
+                Input.GetAxis("Horizontal") * velocidadRot*Time.deltaTime,
                 0
             );
 
