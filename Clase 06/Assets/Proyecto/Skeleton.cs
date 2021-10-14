@@ -12,6 +12,8 @@ public class Skeleton : character1
     public int vida;
     public float PlayerDist;
     public Rigidbody rb;
+    public GameObject smoke;
+    public GameObject drop;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,11 +43,7 @@ public class Skeleton : character1
             }
         }
 
-
-
-
-
-
+    
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -55,9 +53,16 @@ public class Skeleton : character1
     {
         rb.AddForce(Vector3.Normalize(transform.position - position) * force, ForceMode.Impulse);
     }
-    public override void takeDmg2(int dmg)
+    public override void takeDmg2(int dmg, bool rupia)
     {
         Debug.Log("skeleto recibio daño");
+        vida -= dmg;
+        if (vida <= 0)
+        {
+            Instantiate(smoke, transform.position, transform.rotation);
+            Instantiate(drop, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
     private void redirect()
     {

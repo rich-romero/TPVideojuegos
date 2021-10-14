@@ -6,6 +6,7 @@ public class Hurtbox : MonoBehaviour
 {
     public int Dmg;
     public float push;
+    public bool rupiadrop;
     // Start is called before the first frame update
     void Start()
     {

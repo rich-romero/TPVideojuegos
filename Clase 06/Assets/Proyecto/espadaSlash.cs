@@ -38,7 +38,7 @@ public class espadaSlash : MonoBehaviour
         Invoke("slash", frequency);
         Instantiate(slashSonido, transform.position, transform.rotation);
         slashSonido.Play();
-        Instantiate(prefab, transform.position, Quaternion.Euler((float)-45, (float)45, (float)0));
+        Instantiate(prefab, transform.position,transform.rotation);
         
         //Invoke("cancelDisparo", 5);
     }
