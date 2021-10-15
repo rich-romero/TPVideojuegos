@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface Damageable
 {
-    public void takeDmg(int dmg);
+    public void takeDmg(int dmg, bool rupia);
 }

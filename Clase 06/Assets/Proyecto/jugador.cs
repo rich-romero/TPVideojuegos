@@ -12,6 +12,7 @@ public class jugador : character1
     public bool cubeIsOnTheGround;
     public float salto;
     public int impacto;
+    public int rupias;
 
     public Renderer body;
     public Renderer head;
@@ -121,13 +122,17 @@ public class jugador : character1
 
     }
 
-    public override void takeDmg2(int dmg)
+    public override void takeDmg2(int dmg,bool rupia)
     {
-        if (damageFlag)
+        if (damageFlag && rupia==false)
         {
             damageFlag = false;
             vida -= dmg;
             visualQueue();
+        }
+        else
+        {
+            rupias += dmg;
         }
     }
 

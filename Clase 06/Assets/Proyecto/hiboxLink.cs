@@ -21,15 +21,21 @@ public class hiboxLink : MonoBehaviour
         
         
             charr.bePushed(force, position);
-            charr.takeDmg(dmg);
+            charr.takeDmg(dmg,false);
         
     }
     private void OnTriggerEnter(Collider other)
-    {
+    {    
         if (other.GetComponent<Hurtbox>() != null)
         {
-            charr.bePushed(other.GetComponent<Hurtbox>().push, other.transform.position);
-            charr.takeDmg(other.GetComponent<Hurtbox>().Dmg);
+            Hurtbox hurtbox = other.GetComponent<Hurtbox>();
+            charr.bePushed(hurtbox.push, other.transform.position);
+            charr.takeDmg(hurtbox.Dmg, hurtbox.rupiadrop);
+            if (hurtbox.rupiadrop)
+            {
+                hurtbox.rupiaEnd();
+                //TERMINAR RUPIA END PARA EL 19/10
+            }
         }
         Debug.Log("COlisinó");
         //other.transform

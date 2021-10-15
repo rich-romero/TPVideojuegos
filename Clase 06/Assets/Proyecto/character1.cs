@@ -21,12 +21,12 @@ public class character1 : MonoBehaviour, Damageable, Pushable
         
     }
 
-    public void takeDmg(int dmg)
+    public void takeDmg(int dmg, bool rupia)
     {
-        takeDmg2(dmg);
+        takeDmg2(dmg,rupia);
         Debug.Log("Recibió Daño");
     }
-    public virtual void takeDmg2(int dmg)
+    public virtual void takeDmg2(int dmg, bool rupia)
     {
 
     }
